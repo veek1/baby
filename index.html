@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>For My Love Ella ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main id="game-container">
+        <section id="start-screen">
+            <h1 class="title">Hey Baby. ❤️</h1>
+            <p>From FUTO to the Eye Clinic... our story was written in the stars. Ready to see how well you remember us?</p>
+            <button class="main-btn" onclick="nextScreen('q1')">Begin the Quest</button>
+        </section>
+
+        <section id="q1" hidden>
+            <h1>Where it Began 🌙</h1>
+            <p>It was night time in FUTO when I first fell for you. Where were we standing?</p>
+            <button class="option-btn" onclick="wrong()">Hostel A</button>
+            <button class="option-btn" onclick="nextScreen('q2')">Close to Hostel C</button>
+            <button class="option-btn" onclick="wrong()">At the Convocation Arena</button>
+        </section>
+
+        <section id="q2" hidden>
+            <h1>Seeing You Everywhere...</h1>
+            <p>After that night, I kept looking for you. Which of these did we share?</p>
+            <button class="option-btn" onclick="nextScreen('q3')">STACC Choir & Enugu Meetings</button>
+            <button class="option-btn" onclick="wrong()">Man O' War & Sports</button>
+            <button class="option-btn" onclick="wrong()">Rotaract & Debate Club</button>
+        </section>
+
+        <section id="q3" hidden>
+            <h1>The Eye Clinic 🏥</h1>
+            <p>Fate brought us back together when I had an eye inflammation. What was the special occasion when we finally officially started "Us"?</p>
+            <button class="option-btn" onclick="wrong()">Your Birthday</button>
+            <button class="option-btn" onclick="nextScreen('final')">My Birthday in April</button>
+            <button class="option-btn" onclick="wrong()">Valentine's Day</button>
+        </section>
+
+        <section id="final" hidden>
+            <h1 class="glow-text">Happy Valentine's Day!</h1>
+            <p>Baby, you attended to me with love when I couldn't see clearly, but now I see perfectly: You are the best thing that ever happened to me.</p>
+            <div class="heart-icon">💖</div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
